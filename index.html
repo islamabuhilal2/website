@@ -26,7 +26,7 @@ body {
 
 header {
   text-align: center;
-  padding: 65px 20px 30px;
+  padding: 60px 20px 25px;
 }
 
 h1 {
@@ -40,14 +40,14 @@ header p {
   margin: 0;
 }
 
-/* Experiments Grid */
+/* Experiment Grid */
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   width: 100%;
-  max-width: 1250px;
+  max-width: 1200px;
   margin: 30px auto;
   padding: 20px;
   align-items: stretch;
@@ -59,7 +59,7 @@ header p {
   background: #1d2934;
   border: 1px solid #354450;
   border-radius: 20px;
-  padding: 38px 22px;
+  padding: 38px 24px;
   min-width: 0;
 
   display: flex;
@@ -68,8 +68,7 @@ header p {
   text-align: center;
 
   height: 100%;
-  transition: transform 0.3s, border-color 0.3s,
-              box-shadow 0.3s;
+  transition: 0.3s;
 }
 
 .card:hover {
@@ -78,20 +77,21 @@ header p {
   box-shadow: 0 12px 35px #0005;
 }
 
-/* Icon */
+/* Icons */
 
 .emoji {
   font-size: 65px;
   line-height: 1.2;
   height: 85px;
   width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-/* Card Title */
+/* Titles */
 
 .card h2 {
   font-size: 23px;
@@ -104,7 +104,7 @@ header p {
   align-items: center;
 }
 
-/* Description */
+/* Descriptions */
 
 .card p {
   color: #aab8c4;
@@ -134,7 +134,7 @@ header p {
   font-size: 15px;
 
   margin-top: auto;
-  transition: background 0.2s;
+  transition: 0.2s;
 }
 
 .card a:hover {
@@ -161,7 +161,7 @@ footer {
 @media (max-width: 900px) {
   .container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 700px;
+    max-width: 760px;
   }
 
   header {
@@ -206,14 +206,13 @@ footer {
 <header>
   <h1>🔬 Interactive Science Labs</h1>
   <p>
-    Explore and learn through interactive
-    science experiments
+    Explore and learn through interactive science experiments
   </p>
 </header>
 
 <main class="container">
 
-  <!-- Volcano -->
+  <!-- 1. Volcano -->
 
   <article class="card">
     <div class="emoji">🌋</div>
@@ -227,7 +226,7 @@ footer {
     </a>
   </article>
 
-  <!-- Earth Science -->
+  <!-- 2. Earth Science -->
 
   <article class="card">
     <div class="emoji">🌍</div>
@@ -241,7 +240,7 @@ footer {
     </a>
   </article>
 
-  <!-- Biology -->
+  <!-- 3. Biology Cell Lab -->
 
   <article class="card">
     <div class="emoji">🧬</div>
@@ -255,7 +254,7 @@ footer {
     </a>
   </article>
 
-  <!-- Atomic Structure -->
+  <!-- 4. Atomic Structure -->
 
   <article class="card">
     <div class="emoji">⚛️</div>
@@ -265,6 +264,34 @@ footer {
       and different chemical elements.
     </p>
     <a href="https://islamabuhilal2.github.io/Atomic_Structure/">
+      Launch Experiment
+    </a>
+  </article>
+
+  <!-- 5. Buoyancy and Density Lab -->
+
+  <article class="card">
+    <div class="emoji">🚢</div>
+    <h2>Buoyancy &amp; Density Lab</h2>
+    <p>
+      Investigate floating, sinking,
+      density, and buoyancy forces.
+    </p>
+    <a href="https://islamabuhilal2.github.io/Buoyancy-Density-Lab/">
+      Launch Experiment
+    </a>
+  </article>
+
+  <!-- 6. Torque Balance -->
+
+  <article class="card">
+    <div class="emoji">⚖️</div>
+    <h2>Torque Balance</h2>
+    <p>
+      Explore rotational forces,
+      moments, and mechanical equilibrium.
+    </p>
+    <a href="https://islamabuhilal2.github.io/Torque_Balance/">
       Launch Experiment
     </a>
   </article>
