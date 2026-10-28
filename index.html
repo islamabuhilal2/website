@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Science Labs</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101820;
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 65px 20px 35px;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 46px);
+  margin-bottom: 12px;
+}
+
+header p {
+  color: #b5c0ca;
+  font-size: 17px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1150px;
+  margin: 25px auto;
+  padding: 20px;
+}
+
+.card {
+  background: #1d2934;
+  border: 1px solid #354450;
+  border-radius: 20px;
+  padding: 38px 22px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #59e0aa;
+  box-shadow: 0 12px 35px #0005;
+}
+
+.emoji {
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 23px;
+}
+
+.card p {
+  color: #aab8c4;
+  min-height: 45px;
+}
+
+.card a {
+  display: inline-block;
+  background: #59e0aa;
+  color: #101820;
+  padding: 13px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 14px;
+  transition: 0.2s;
+}
+
+.card a:hover {
+  background: #a3f6d5;
+}
+
+footer {
+  padding: 35px;
+  color: #84929d;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🔬 Interactive Science Labs</h1>
+  <p>Explore and learn through interactive experiments</p>
+</header>
+
+<main class="container">
+
+  <div class="card">
+    <div class="emoji">🌋</div>
+    <h2>Volcano Experiment</h2>
+    <p>Explore volcanic chemical reactions.</p>
+    <a href="https://islamabuhilal2.github.io/Volcano/">
+      Launch Experiment
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="emoji">🌍</div>
+    <h2>Earth Science</h2>
+    <p>Discover interactive Earth science.</p>
+    <a href="https://islamabuhilal2.github.io/Earth_Science/">
+      Launch Experiment
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="emoji">🧬</div>
+    <h2>Biology Cell Lab</h2>
+    <p>Explore cell structures and functions.</p>
+    <a href="https://islamabuhilal2.github.io/Bio_cell_lab/">
+      Launch Experiment
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="emoji">⚛️</div>
+    <h2>Atomic Structure</h2>
+    <p>Explore atoms, electrons, and elements.</p>
+    <a href="https://islamabuhilal2.github.io/Atomic_Structure/">
+      Launch Experiment
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  Interactive Science Laboratory © 2026
+</footer>
+
+</body>
+</html>
