@@ -12,41 +12,52 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg: #101820;
+  --card: #1d2934;
+  --border: #354450;
+  --accent: #59e0aa;
+  --text: #ffffff;
+  --muted: #aab8c4;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   font-family: Arial, sans-serif;
-  background: #101820;
-  color: white;
+  background: var(--bg);
+  color: var(--text);
   display: flex;
   flex-direction: column;
 }
 
+/* Header */
+
 header {
   text-align: center;
-  padding: 60px 20px 25px;
+  padding: 50px 20px 20px;
 }
 
 h1 {
-  font-size: clamp(28px, 5vw, 46px);
+  font-size: clamp(26px, 5vw, 44px);
   margin: 0 0 14px;
 }
 
 header p {
   color: #b5c0ca;
-  font-size: 17px;
+  font-size: 16px;
   margin: 0;
 }
 
-/* Grid */
+/* Experiment Grid */
 
 .container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
   width: 100%;
-  max-width: 1200px;
-  margin: 30px auto;
+  max-width: 1400px;
+  margin: 25px auto;
   padding: 20px;
   align-items: stretch;
 }
@@ -54,61 +65,58 @@ header p {
 /* Cards */
 
 .card {
-  background: #1d2934;
-  border: 1px solid #354450;
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 38px 24px;
+  padding: 30px 20px;
   min-width: 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-
   height: 100%;
-  transition: 0.3s;
+  transition: transform .3s, border-color .3s,
+              box-shadow .3s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  border-color: #59e0aa;
+  transform: translateY(-7px);
+  border-color: var(--accent);
   box-shadow: 0 12px 35px #0005;
 }
 
 /* Icons */
 
 .emoji {
-  font-size: 65px;
+  font-size: 58px;
   line-height: 1.2;
-  height: 85px;
+  height: 80px;
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 /* Titles */
 
 .card h2 {
-  font-size: 23px;
+  font-size: 20px;
   line-height: 1.3;
-  margin: 0 0 16px;
-  min-height: 60px;
-
+  margin: 0 0 14px;
+  min-height: 56px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 /* Descriptions */
 
 .card p {
-  color: #aab8c4;
-  font-size: 15px;
+  color: var(--muted);
+  font-size: 14px;
   line-height: 1.6;
-  margin: 0 0 26px;
+  margin: 0 0 25px;
   flex-grow: 1;
 }
 
@@ -118,21 +126,17 @@ header p {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: #59e0aa;
-  color: #101820;
-
+  background: var(--accent);
+  color: var(--bg);
   width: 100%;
   min-height: 48px;
-  padding: 13px 12px;
-
+  padding: 12px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
-
+  font-size: 14px;
   margin-top: auto;
-  transition: 0.2s;
+  transition: background .2s;
 }
 
 .card a:hover {
@@ -148,7 +152,7 @@ header p {
 
 footer {
   margin-top: auto;
-  padding: 35px 20px;
+  padding: 30px 20px;
   text-align: center;
   color: #84929d;
   font-size: 14px;
@@ -156,10 +160,10 @@ footer {
 
 /* Tablet */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 760px;
+    max-width: 800px;
   }
 }
 
@@ -170,11 +174,11 @@ footer {
     grid-template-columns: 1fr;
     max-width: 440px;
     gap: 18px;
-    margin-top: 15px;
+    margin-top: 12px;
   }
 
   .card {
-    padding: 30px 22px;
+    padding: 26px 22px;
   }
 
   .card h2 {
@@ -187,8 +191,7 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .card,
-  .card a {
+  .card, .card a {
     transition: none;
   }
 }
@@ -200,98 +203,177 @@ footer {
 <header>
   <h1>🔬 Interactive Educational Labs</h1>
   <p>
-    Explore science and mathematics through
-    interactive experiments
+    Explore Science and Mathematics Through
+    Interactive Experiments
   </p>
 </header>
 
 <main class="container">
 
-  <!-- 1. Lens -->
+  <!-- 1. Photosynthesis -->
+
+  <article class="card">
+    <div class="emoji">🌿</div>
+    <h2>Photosynthesis Lab</h2>
+    <p>
+      Explore photosynthesis and the factors
+      that affect the process in plants.
+    </p>
+    <a href="https://islamabuhilal2.github.io/biology_photosynthesis/">
+      Launch Experiment
+    </a>
+  </article>
+
+  <!-- 2. Lens -->
 
   <article class="card">
     <div class="emoji">🔍</div>
     <h2>Lens Experiment</h2>
     <p>
-      Explore light refraction, focal length,
-      lenses, and image formation.
+      Explore light refraction,
+      focal length, and image formation.
     </p>
     <a href="https://islamabuhilal2.github.io/Lens/">
       Launch Experiment
     </a>
   </article>
 
-  <!-- 2. Magnet -->
+  <!-- 3. Algebra Balance -->
+
+  <article class="card">
+    <div class="emoji">⚖️</div>
+    <h2>Algebra Balance</h2>
+    <p>
+      Understand algebraic equations
+      through interactive balance models.
+    </p>
+    <a href="https://islamabuhilal2.github.io/algebra_balance/">
+      Launch Experiment
+    </a>
+  </article>
+
+  <!-- 4. Ball Collision -->
+
+  <article class="card">
+    <div class="emoji">🎱</div>
+    <h2>Ball Collision</h2>
+    <p>
+      Investigate collisions, motion,
+      momentum, and physical interactions.
+    </p>
+    <a href="https://islamabuhilal2.github.io/ball_collision/">
+      Launch Experiment
+    </a>
+  </article>
+
+  <!-- 5. Evaporation -->
+
+  <article class="card">
+    <div class="emoji">💧</div>
+    <h2>Evaporation Lab</h2>
+    <p>
+      Discover evaporation and the
+      factors affecting its rate.
+    </p>
+    <a href="https://islamabuhilal2.github.io/evaporation_lab/">
+      Launch Experiment
+    </a>
+  </article>
+
+  <!-- 6. Periodic Table -->
+
+  <article class="card">
+    <div class="emoji">⚛️</div>
+    <h2>Arabic Periodic Table</h2>
+    <p>
+      Explore chemical elements,
+      atomic structures, and properties.
+    </p>
+    <a href="https://islamabuhilal2.github.io/arabic_periodic_table/">
+      Launch Experiment
+    </a>
+  </article>
+
+  <!-- 7. Equilibrium -->
+
+  <article class="card">
+    <div class="emoji">⚗️</div>
+    <h2>Equilibrium Lab</h2>
+    <p>
+      Explore equilibrium concepts
+      through interactive experiments.
+    </p>
+    <a href="https://islamabuhilal2.github.io/equilibrium/">
+      Launch Experiment
+    </a>
+  </article>
+
+  <!-- 8. Angle Measurement -->
+
+  <article class="card">
+    <div class="emoji">📏</div>
+    <h2>Angle Measurement</h2>
+    <p>
+      Measure, compare, and explore
+      angles using interactive tools.
+    </p>
+    <a href="https://islamabuhilal2.github.io/angle-measurement/">
+      Launch Experiment
+    </a>
+  </article>
+
+  <!-- 9. Magnet -->
 
   <article class="card">
     <div class="emoji">🧲</div>
     <h2>Magnet Experiment</h2>
     <p>
       Investigate magnetic fields,
-      attraction, repulsion,
-      and magnetic forces.
+      attraction, repulsion, and forces.
     </p>
     <a href="https://islamabuhilal2.github.io/Magnet/">
       Launch Experiment
     </a>
   </article>
 
-  <!-- 3. Hypotenuse -->
+  <!-- 10. Hypotenuse -->
 
   <article class="card">
     <div class="emoji">📐</div>
     <h2>Hypotenuse Lab</h2>
     <p>
-      Explore right triangles,
-      the Pythagorean theorem,
-      and hypotenuse calculations.
+      Explore right triangles and the
+      Pythagorean theorem interactively.
     </p>
     <a href="https://islamabuhilal2.github.io/hypotenuse/">
       Launch Experiment
     </a>
   </article>
 
-  <!-- 4. Human Heart -->
+  <!-- 11. Human Heart -->
 
   <article class="card">
     <div class="emoji">❤️</div>
     <h2>Human Heart</h2>
     <p>
       Explore the anatomy of the human
-      heart, its chambers,
-      and blood circulation.
+      heart and blood circulation.
     </p>
     <a href="https://islamabuhilal2.github.io/Human_Heart/">
       Launch Experiment
     </a>
   </article>
 
-  <!-- 5. Biology Cell Lab -->
+  <!-- 12. Biology Cell -->
 
   <article class="card">
     <div class="emoji">🧫</div>
     <h2>Biology Cell Lab</h2>
     <p>
-      Explore cell structures,
-      organelles, and their
-      biological functions.
+      Discover cellular structures,
+      organelles, and their functions.
     </p>
     <a href="https://islamabuhilal2.github.io/BioCellLab/">
-      Launch Experiment
-    </a>
-  </article>
-
-  <!-- 6. Arabic Periodic Table -->
-
-  <article class="card">
-    <div class="emoji">⚛️</div>
-    <h2>Arabic Periodic Table</h2>
-    <p>
-      Discover chemical elements,
-      atomic numbers, and properties
-      using an interactive periodic table.
-    </p>
-    <a href="https://islamabuhilal2.github.io/arabic_periodic_table/">
       Launch Experiment
     </a>
   </article>
